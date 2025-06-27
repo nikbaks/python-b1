@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    ul {
+      background-color: #f9f9f9;
+      padding: 20px;
+    }
+    li {
+      background-color: #ccc;
+      margin: 5px 0;
+      padding: 10px;
+    }
+    li span {
+      background-color: #999;
+      padding: 2px 4px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Список фруктів</h2>
+  <ul>
+    <li><span>Яблуко</span></li>
+    <li><span>Банан</span></li>
+    <li><span>Апельсин</span></li>
+    <li><span>Ківі</span></li>
+  </ul>
+</body>
+</html>
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    li {
+      padding: 10px;
+    }
+    li:nth-child(even) {
+      background-color: #d0e7ff;
+    }
+    li:nth-child(odd) {
+      background-color: #a6d1ff;
+    }
+    .done {
+      text-decoration: line-through;
+      background-color: #ccc;
+    }
+    .done::before {
+      content: "✔ ";
+      color: green;
+    }
+    .todo::before {
+      content: "⭕ ";
+    }
+    .remove::after {
+      content: " ❌";
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <h2>Список завдань</h2>
+  <ul>
+    <li class="done remove">Завдання 1 виконано</li>
+    <li class="todo remove">Завдання 2 не виконано</li>
+    <li class="done">Завдання 3 виконано</li>
+    <li class="todo">Завдання 4 не виконано</li>
+  </ul>
+</body>
+</html>
+
+
