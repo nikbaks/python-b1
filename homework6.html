@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fridge Items</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0;
+      padding: 20px;
+      background-color: #f9f9f9;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      width: 100%;
+    }
+
+    .item {
+      background: white;
+      border: 2px solid #ccc;
+      border-radius: 12px;
+      padding: 10px;
+      text-align: center;
+      box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .item img {
+      max-width: 64px;
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+    .footer {
+      margin-top: 20px;
+      font-style: italic;
+      color: #555;
+    }
+
+    @media (max-width: 800px) {
+      .grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (min-width: 801px) {
+      .grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>What do I have in my fridge?</h1>
+  <div class="grid">
+    <div class="item"><img src="https://img.freepik.com/premium-vector/minimalist-chili-pepper-icon-vector_790291-56.jpg"/><div>Pepper</div></div>
+    <div class="item"><img src="https://img.icons8.com/color/96/apple.png"/><div>Apple</div></div>
+    <div class="item"><img src="https://img.icons8.com/color/96/cheese.png"/><div>Cheese</div></div>
+    <div class="item"><img src="https://img.icons8.com/color/96/corn.png"/><div>Corn</div></div>
+    <div class="item"><img src="https://img.icons8.com/color/96/mushroom.png"/><div>Mushroom</div></div>
+    <div class="item"><img src="https://img.icons8.com/color/96/garlic.png"/><div>Garlic</div></div>
+    <div class="item"><img src="https://img.icons8.com/color/96/steak.png"/><div>Beef</div></div>
+    <div class="item"><img src="https://img.icons8.com/color/96/fish.png"/><div>Fish</div></div>
+    <div class="item"><img src="https://img.icons8.com/color/96/egg.png"/><div>Eggs</div></div>
+    <div class="item"><img src="https://www.shutterstock.com/image-vector/vector-illustration-coriander-leaves-scientific-600nw-2413638111.jpg"/><div>Coriander</div></div>
+  </div>
+  <div class="footer">-- that's all --</div>
+</body>
+</html>
