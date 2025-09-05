@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Плани підписки</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      margin: 50px auto;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    th, td {
+      padding: 15px;
+      border: 1px solid #ddd;
+    }
+
+    tr:first-child th {
+      background: #6c7a89;
+      color: white;
+      font-size: 18px;
+    }
+
+    tr:first-child th:first-child {
+      background: #6c7a89;
+      border-top-left-radius: 8px;
+    }
+
+    tr:first-child th:last-child {
+      border-top-right-radius: 8px;
+    }
+
+    tr:nth-child(2) th {
+      background: #2c3e50;
+      color: white;
+      font-size: 20px;
+    }
+
+    tr:nth-child(even) td {
+      background: #f2f2f2;
+    }
+
+    tr:last-child td {
+      background: #eee;
+    }
+
+    tr:last-child td button {
+      padding: 8px 15px;
+      border: 1px solid #999;
+      border-radius: 5px;
+      background: #f5f5f5;
+      cursor: pointer;
+    }
+
+    tr:last-child td button:hover {
+      background: #ddd;
+    }
+  </style>
+</head>
+<body>
+  <table>
+    <tr>
+      <th>Choose your plan</th>
+      <th>starter</th>
+      <th>econom</th>
+      <th>standart</th>
+      <th>professional</th>
+    </tr>
+    <tr>
+      <th></th>
+      <th>$10<br>per month</th>
+      <th>$30<br>per month</th>
+      <th>$59<br>per month</th>
+      <th>$99<br>per month</th>
+    </tr>
+    <tr>
+      <td>Amount of space</td>
+      <td>20GB</td>
+      <td>40GB</td>
+      <td>110GB</td>
+      <td>Unlimited</td>
+    </tr>
+    <tr>
+      <td>Bandwidth per month</td>
+      <td>120GB</td>
+      <td>240GB</td>
+      <td>610GB</td>
+      <td>1300GB</td>
+    </tr>
+    <tr>
+      <td>Email accounts</td>
+      <td>1</td>
+      <td>15</td>
+      <td>60</td>
+      <td>Unlimited</td>
+    </tr>
+    <tr>
+      <td>MySQL databases</td>
+      <td>1</td>
+      <td>15</td>
+      <td>60</td>
+      <td>Unlimited</td>
+    </tr>
+    <tr>
+      <td>25h support</td>
+      <td>No</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>Support tickets per month</td>
+      <td>2</td>
+      <td>6</td>
+      <td>14</td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><button>START</button></td>
+      <td><button>START</button></td>
+      <td><button>START</button></td>
+      <td><button>START</button></td>
+    </tr>
+  </table>
+</body>
+</html>
