@@ -1,0 +1,77 @@
+const car = {
+    brand: "Toyota",
+    model: "Corolla",
+    year: 2018,
+    speed: 90
+};
+
+function showCarInfo(car) {
+    console.log(`Виробник: ${car.brand}`);
+    console.log(`Модель: ${car.model}`);
+    console.log(`Рік: ${car.year}`);
+    console.log(`Середня швидкість: ${car.speed} км/год`);
+}
+
+function travelTime(car, distance) {
+    let time = distance / car.speed;
+    let rests = Math.floor(time / 4);
+    return time + rests;
+}
+
+function Fraction(n, d) {
+    this.n = n;
+    this.d = d;
+}
+
+function add(f1, f2) {
+    return new Fraction(
+        f1.n * f2.d + f2.n * f1.d,
+        f1.d * f2.d
+    );
+}
+
+function sub(f1, f2) {
+    return new Fraction(
+        f1.n * f2.d - f2.n * f1.d,
+        f1.d * f2.d
+    );
+}
+
+function mul(f1, f2) {
+    return new Fraction(
+        f1.n * f2.n,
+        f1.d * f2.d
+    );
+}
+
+function div(f1, f2) {
+    return new Fraction(
+        f1.n * f2.d,
+        f1.d * f2.n
+    );
+}
+
+function simplify(fr) {
+    function gcd(a, b) {
+        while (b !== 0) {
+            let t = b;
+            b = a % b;
+            a = t;
+        }
+        return a;
+    }
+    let g = gcd(Math.abs(fr.n), Math.abs(fr.d));
+    return new Fraction(fr.n / g, fr.d / g);
+}
+
+showCarInfo(car);
+console.log("Час у дорозі:", travelTime(car, 450));
+
+let f1 = new Fraction(4, 6);
+let f2 = new Fraction(1, 3);
+
+console.log("Додавання:", simplify(add(f1, f2)));
+console.log("Віднімання:", simplify(sub(f1, f2)));
+console.log("Множення:", simplify(mul(f1, f2)));
+console.log("Ділення:", simplify(div(f1, f2)));
+console.log("Скорочення:", simplify(f1));
