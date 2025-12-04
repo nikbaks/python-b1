@@ -1,0 +1,69 @@
+const rectangle = {
+  leftTop: { x: 2, y: 8 },
+  rightBottom: { x: 10, y: 2 }
+};
+
+function printInfo(r) {
+  console.log("Ліва верхня точка:", r.leftTop);
+  console.log("Права нижня точка:", r.rightBottom);
+}
+
+function getWidth(r) {
+  return r.rightBottom.x - r.leftTop.x;
+}
+
+function getHeight(r) {
+  return r.leftTop.y - r.rightBottom.y;
+}
+
+function getArea(r) {
+  return getWidth(r) * getHeight(r);
+}
+
+function getPerimeter(r) {
+  return 2 * (getWidth(r) + getHeight(r));
+}
+
+function changeWidth(r, d) {
+  r.rightBottom.x = r.leftTop.x + getWidth(r) + d;
+}
+
+function changeHeight(r, d) {
+  r.rightBottom.y = r.leftTop.y - (getHeight(r) + d);
+}
+
+function changeSize(r, dx, dy) {
+  changeWidth(r, dx);
+  changeHeight(r, dy);
+}
+
+function moveX(r, dx) {
+  r.leftTop.x += dx;
+  r.rightBottom.x += dx;
+}
+
+function moveY(r, dy) {
+  r.leftTop.y += dy;
+  r.rightBottom.y += dy;
+}
+
+function moveXY(r, dx, dy) {
+  moveX(r, dx);
+  moveY(r, dy);
+}
+
+function isInside(r, x, y) {
+  return (
+    x >= r.leftTop.x &&
+    x <= r.rightBottom.x &&
+    y <= r.leftTop.y &&
+    y >= r.rightBottom.y
+  );
+}
+
+printInfo(rectangle);
+console.log(getWidth(rectangle));
+console.log(getHeight(rectangle));
+console.log(getArea(rectangle));
+console.log(getPerimeter(rectangle));
+console.log(isInside(rectangle, 5, 5));
